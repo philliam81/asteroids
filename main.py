@@ -3,6 +3,7 @@
 # throughout this file
 import pygame
 from constants import *
+import player
 
 def main():
     pygame.init()
@@ -16,6 +17,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        player.update(dt)
         # Fill the screen with black
         black = (0, 0, 0)  # RGB color for black
         screen.fill(black)
